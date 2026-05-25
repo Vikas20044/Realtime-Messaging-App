@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Messaging - Search Users</title>
+    <link rel="stylesheet" href="public/css/global.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Real time Messaging</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="narrow">
+        <div class="search-controls">
+            <input type="text" class="search-input" placeholder="Search by username or tag...">
+            <select class="filter-select">
+                <option value="all">All Users</option>
+                <option value="online">Online Only</option>
+                <option value="offline">Offline Only</option>
+            </select>
+        </div>
+
+        <div class="results-container">
+            <div class="user-card">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <div class="avatar">JD</div>
+                        <div class="status-dot"></div>
+                    </div>
+                    <div class="user-details">
+                        <h3>Vikas K</h3>
+                        <p>@vikssk</p>
+                    </div>
+                </div>
+                <button class="action-btn">Add Friend</button>
+            </div>
+
+            <div class="user-card">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <div class="avatar">BS</div>
+                        <div class="status-dot offline"></div>
+                    </div>
+                    <div class="user-details">
+                        <h3>User 2</h3>
+                        <p>user2@gmail.com</p>
+                    </div>
+                </div>
+                <button class="action-btn">Add Friend</button>
+            </div>
+
+            <div class="user-card">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <div class="avatar">AM</div>
+                        <div class="status-dot"></div>
+                    </div>
+                    <div class="user-details">
+                        <h3>User 3</h3>
+                        <p>user3@gmail.com</p>
+                    </div>
+                </div>
+                <button class="action-btn">Add Friend</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

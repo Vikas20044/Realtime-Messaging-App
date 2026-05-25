@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Messaging - Group Chat</title>
+    <link rel="stylesheet" href="public/css/global.css">
+</head>
+<body class="fixed-layout">
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Real Time Application</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="chat.html" class="active">Chat</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="chat-container">
+        <aside class="channels-sidebar">
+            <h3 class="sidebar-title">Channels</h3>
+            <ul class="channel-list">
+                <li class="channel-item active"><a href="#">Group1</a></li>
+                <li class="channel-item"><a href="#">Group2</a></li>
+                <li class="channel-item"><a href="#">Group3</a></li>
+                <li class="channel-item"><a href="#">Group4</a></li>
+            </ul>
+        </aside>
+
+        <section class="chat-window">
+            <header class="chat-header">
+                <div class="channel-meta">
+                    <h2># general</h2>
+                    <p>3 active members right now</p>
+                </div>
+            </header>
+
+            <div class="message-history">
+                <div class="message-row incoming">
+                    <div class="message-bubble">
+                        Hey team! Did everyone see the deployment updates for Phase 1?
+                    </div>
+                    <div class="message-meta">
+                        <span>Vikas K</span>
+                        <span>10:42 AM</span>
+                    </div>
+                </div>
+
+                <div class="message-row outgoing">
+                    <div class="message-bubble">
+                        Yes Vikas, looking solid. I am reviewing the static frontend architecture layouts right now.
+                    </div>
+                    <div class="message-meta">
+                        <span>10:44 AM</span>
+                    </div>
+                </div>
+
+                <div class="message-row incoming">
+                    <div class="message-bubble">
+                        Awesome. Remember to check alignment with the Node.js serving routes we decided on earlier.
+                    </div>
+                    <div class="message-meta">
+                        <span>User</span>
+                        <span>10:45 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-bar">
+                <form class="input-form" onsubmit="event.preventDefault();">
+                    <input type="text" class="chat-input" placeholder="Message # general...">
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
