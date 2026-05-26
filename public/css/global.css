@@ -40,7 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 1rem;
+      padding: 0 0.75rem;
       position: fixed;
       top: 0;
       left: 0;
@@ -50,15 +50,16 @@
   }
   
   .nav-logo {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: var(--accent);
       text-decoration: none;
+      flex-shrink: 0;
   }
   
   .nav-links {
       display: flex;
-      gap: 0.8rem;
+      gap: 0.3rem;
       list-style: none;
   }
   
@@ -66,10 +67,11 @@
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
-      padding: 0.3rem 0.5rem;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.5rem;
       border-radius: 4px;
       transition: all 0.2s ease;
+      white-space: nowrap;
   }
   
   .nav-links a:hover, .nav-links a.active {
@@ -195,20 +197,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.5rem;
   }
   
   .user-info {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.6rem;
       min-width: 0;
   }
   
   .avatar-container {
       position: relative;
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       flex-shrink: 0;
   }
   
@@ -222,7 +224,7 @@
       justify-content: center;
       font-weight: 600;
       color: var(--accent);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
   }
   
   .status-dot {
@@ -245,7 +247,7 @@
   }
   
   .user-details h3 {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-bottom: 0.1rem;
       white-space: nowrap;
       overflow: hidden;
@@ -253,7 +255,7 @@
   }
   
   .user-details p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
       white-space: nowrap;
       overflow: hidden;
@@ -264,10 +266,10 @@
       background-color: var(--accent);
       color: var(--text-main);
       border: none;
-      padding: 0.5rem 0.8rem;
+      padding: 0.5rem 0.7rem;
       border-radius: 6px;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       cursor: pointer;
       flex-shrink: 0;
       transition: background-color 0.2s ease;
@@ -524,41 +526,46 @@
   
   .input-bar {
       background-color: var(--bg-primary);
-      padding: 0.6rem 1rem;
+      padding: 0.6rem 0.75rem;
       flex-shrink: 0;
       border-top: 1px solid var(--bg-tertiary);
+      width: 100%;
   }
   
   .input-form {
       display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
       background-color: var(--bg-tertiary);
       border-radius: 8px;
       padding: 0.3rem;
       width: 100%;
+      gap: 0.25rem;
   }
   
   .chat-input {
       flex: 1;
+      min-width: 0;
       background: none;
       border: none;
       outline: none;
       color: var(--text-main);
-      padding: 0.4rem 0.6rem;
+      padding: 0.4rem 0.5rem;
       font-size: 0.9rem;
-      min-width: 0;
   }
   
   .send-btn {
       background-color: var(--accent);
       color: var(--text-main);
       border: none;
-      padding: 0.4rem 1rem;
+      padding: 0.5rem 0.9rem;
       border-radius: 6px;
       font-weight: 600;
       font-size: 0.85rem;
       cursor: pointer;
       flex-shrink: 0;
       transition: background-color 0.2s ease;
+      white-space: nowrap;
   }
   
   .send-btn:hover {
