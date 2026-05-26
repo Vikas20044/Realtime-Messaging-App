@@ -392,8 +392,11 @@
   
   .chat-container {
       height: calc(100vh - var(--nav-height));
+      height: calc(100dvh - var(--nav-height));
       display: grid;
       grid-template-columns: 1fr;
+      position: relative;
+      overflow: hidden;
   }
   
   .channels-sidebar {
@@ -402,6 +405,8 @@
       display: none;
       flex-direction: column;
       padding: 1rem;
+      height: 100%;
+      overflow-y: auto;
   }
   
   .sidebar-title {
@@ -439,6 +444,9 @@
       flex-direction: column;
       background-color: var(--bg-primary);
       height: 100%;
+      min-height: 0;
+      width: 100%;
+      position: relative;
   }
   
   .chat-header {
@@ -464,10 +472,11 @@
   .message-history {
       flex: 1;
       padding: 1rem;
-      overflow-y: auto;
+      overflow-y: scroll;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      min-height: 0;
       -webkit-overflow-scrolling: touch;
   }
   
@@ -517,6 +526,7 @@
       background-color: var(--bg-primary);
       padding: 0.6rem 1rem;
       flex-shrink: 0;
+      border-top: 1px solid var(--bg-tertiary);
   }
   
   .input-form {
@@ -524,6 +534,7 @@
       background-color: var(--bg-tertiary);
       border-radius: 8px;
       padding: 0.3rem;
+      width: 100%;
   }
   
   .chat-input {
@@ -534,6 +545,7 @@
       color: var(--text-main);
       padding: 0.4rem 0.6rem;
       font-size: 0.9rem;
+      min-width: 0;
   }
   
   .send-btn {
@@ -545,6 +557,7 @@
       font-weight: 600;
       font-size: 0.85rem;
       cursor: pointer;
+      flex-shrink: 0;
       transition: background-color 0.2s ease;
   }
   
